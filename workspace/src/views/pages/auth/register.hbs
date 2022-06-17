@@ -1,17 +1,25 @@
 <article>
     <h2>{{strings/article/0/title}}</h2>
     <form action="/auth/register" method="post">
-        <input type="text" name="username" placeholder="{{strings/article/0/text/0/p}}">
+        <input type="text" name="firstname" placeholder="{{strings/article/0/text/0/p}}">
         <br>
-        <input type="email" name="email" placeholder="{{strings/article/0/text/1/p}}">
+        <input type="text" name="lasttname" placeholder="{{strings/article/0/text/1/p}}">
         <br>
-        <input type="password" name="password" placeholder="{{strings/article/0/text/2/p}}">
+        <select name="gender">
+            <option value="none">{{strings/article/0/input/0/input}}</option>
+            <option value="M">{{strings/article/0/input/1/input}}</option>
+            <option value="F">{{strings/article/0/input/2/input}}</option>
+        </select>
         <br>
-        <input type="password" name="confirm" placeholder="{{strings/article/0/text/3/p}}">
+        <input type="email" name="email" placeholder="{{strings/article/0/text/2/p}}">
+        <br>
+        <input type="password" name="password" placeholder="{{strings/article/0/text/3/p}}">
+        <br>
+        <input type="password" name="confirm" placeholder="{{strings/article/0/text/4/p}}">
         <br>
         <button type="submit">{{strings/article/0/btn/0/btn}}</button>
     </form>
-    <a href="/auth/register">{{strings/article/0/btn/1/btn}}</a>
+    <a href="/auth/login">{{strings/article/0/btn/1/btn}}</a>
     <br>
     <a href="/">{{strings/article/0/btn/2/btn}}</a>
 </article>

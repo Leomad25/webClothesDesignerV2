@@ -10,9 +10,11 @@
 </head>
 <body>
     <section id="background-image"><img src="/img/backgroundImg.png" alt="background image"><section class="background-opacity"></section></section>
+    {{#if strings/title}}
     <header>
         <h1>{{strings/title}}</h1>
     </header>
+    {{/if}}
     <main id="main">
         {{{ body }}}
     </main>

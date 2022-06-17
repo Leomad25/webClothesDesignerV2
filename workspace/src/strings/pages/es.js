@@ -22,10 +22,16 @@ module.exports = {
             {
                 title: 'Registrar nuevo usuario',
                 text: [
-                    {p: 'Nombre de usuario'},
-                    {p: 'Dirección e-Mail'},
+                    {p: 'Nombre'},
+                    {p: 'Apellido'},
+                    {p: 'e-Mail'},
                     {p: 'Contraseña'},
                     {p: 'Confirmar contraseña'}
+                ],
+                input: [
+                    {input: '- Seleccione su genero -'},
+                    {input: 'Mujer (Sra.)'},
+                    {input: 'Hombre (Sr.)'},
                 ],
                 btn: [
                     {btn: 'Registrarme'},
