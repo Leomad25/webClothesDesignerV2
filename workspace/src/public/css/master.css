@@ -3,6 +3,7 @@
     margin: 0;
     font-family: 'Times New Roman';
     cursor: default;
+    outline: none;
 }
 
 body {
@@ -36,6 +37,19 @@ body {
         left: 0;
         background-color: rgba(0, 0, 0, .5);
     }
+
+header {
+    font-size: 1.5rem;
+    font-style: italic;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    position: sticky;
+    top: 0;
+}
 
 main {
     width: 100%;

@@ -12,5 +12,27 @@ module.exports = {
                 ]
             }
         ],
+    },
+    home: {
+
+    },
+    auth: {
+        title: 'Formulario de registro',
+        article: [
+            {
+                title: 'Registrar nuevo usuario',
+                text: [
+                    {p: 'Nombre de usuario'},
+                    {p: 'Dirección e-Mail'},
+                    {p: 'Contraseña'},
+                    {p: 'Confirmar contraseña'}
+                ],
+                btn: [
+                    {btn: 'Registrarme'},
+                    {btn: 'Ya tengo cuenta'},
+                    {btn: 'Regresar al inicio'}
+                ]
+            }
+        ]
     }
 }
