@@ -42,13 +42,6 @@ app.use(passport.session());
 // Global variable
 app.use(async (req, res, next) => {
     app.locals.user = req.user;
-    /*
-    if (req.user) {
-        const avatar = await getAvatarFilename(req.user.iduser);
-        if (avatar) req.avatar = avatar;
-        req.permit = await getPermits(req);
-    }
-    */
     next();
 });
 

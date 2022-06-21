@@ -1,5 +1,5 @@
 module.exports = {
     getFlashMessage: () => {
-        return require('../../strings/flash/es.js').auth.register;
+        return require('../../strings/flash').auth.register;
     }
 }
