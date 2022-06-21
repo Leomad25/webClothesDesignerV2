@@ -7,6 +7,7 @@
     <title>Clothes Designer</title>
     <link rel="stylesheet" href="/css/master.css" type="text/css">
     <link rel="stylesheet" href="/css/pages/{{{stylesheet}}}.css" type="text/css">
+    {{#if flash}}<link rel="stylesheet" href="/partials/flash/flash.css" type="text/css">{{/if}}
 </head>
 <body>
     <section id="background-image"><img src="/img/backgroundImg.png" alt="background image"><section class="background-opacity"></section></section>
@@ -15,6 +16,7 @@
         <h1>{{strings/title}}</h1>
     </header>
     {{/if}}
+    {{>flash}}
     <main id="main">
         {{{ body }}}
     </main>
@@ -22,6 +24,7 @@
         <p>This project is below GPL 3.0 license or later</p>
         <script src="/js/main.js"></script>
         {{#if script}}<script src="/js/pages/{{{script}}}.js"></script>{{/if}}
+        {{#if flash}}<script src="/js/pages/{{{script}}}.js"></script>{{/if}}
     </footer>
 </body>
 </html>

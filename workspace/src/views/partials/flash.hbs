@@ -1,0 +1,19 @@
+{{#if flash}}
+<section id="flash">
+    {{#if flash/type_full}}
+    <section class="full {{flash/class}}"  style="z-index: 99;">
+        <section class="card">
+            <section class="title">
+                <h2>{{flash/title}}</h2>
+                <button onclick="window.location.reload();">
+                    <img src="/img/icons/black/cross.png" alt="cerrar">
+                </button>
+            </section>
+            <section class="message">
+                {{#each flash/message}}<p>{{this}}</p>{{/each}}
+            </section>
+        </section>
+    </section>
+    {{/if}}
+</section>
+{{/if}}
