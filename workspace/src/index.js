@@ -12,6 +12,7 @@ const http = require('http');
 // Initializations
 const app =  express();
 const server = http.createServer(app);
+require('./lib/passport');
 
 // Settings
 app.set('port', 3000);
@@ -28,7 +29,7 @@ app.set('view engine', '.hbs');
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(device.capture());
 app.use(session({
-    secret: 'nodesession',
+    secret: require('./keys').secretKes.session,
     resave: false,
     saveUninitialized: false
 }));
