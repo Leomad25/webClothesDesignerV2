@@ -20,7 +20,8 @@ passport.use('local.singup', new passportLocal({
         password: await encrypt.encryptPassword(password)
     }
     const result = await database.insert.perObj(newUser);
-    if (result.rowsAffected > 0) {
+    console.log(result);
+    if (result.affectedRows > 0) {
         newUser.iduser = result.insertId;
         done(null, newUser);
     } else done(null, false, req.flash('full_error', controller.getFlashMessage().full.error.dataNotStoraged));
