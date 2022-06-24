@@ -14,11 +14,17 @@ module.exports = function(req) {
         },
         auth: {
             register: {
-                stylesheet: 'auth/register',
+                stylesheet: 'auth',
                 script: 'auth/register',
-                strings: require('../../strings/pages').auth,
+                strings: require('../../strings/pages').auth.register,
                 flash
             },
+            login: {
+                stylesheet: 'auth',
+                script: 'auth/register',
+                strings: require('../../strings/pages').auth.login,
+                flash
+            }
         }
     }
 }
