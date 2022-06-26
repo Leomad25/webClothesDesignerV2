@@ -1,4 +1,9 @@
 module.exports = {
+    middleware: {
+        auth: {
+            needUnlogin: ['No puedes acceder con una sesion iniciada a esta pestaña.']
+        }
+    },
     auth: {
         register: {
             error: {

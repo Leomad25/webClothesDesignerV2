@@ -4,7 +4,7 @@ const router = express.Router();
 const controller = require('../../../controller/auth/register.controller');
 const passport = require('passport');
 
-router.get('/register', (req, res) => {
+router.get('/register', require('../../../lib/helpers/middleware').auth.isNotLoggedIn, (req, res) => {
     const { firstname, lastname, gender, email } = req.query;
     let pageConf = require('../../../lib/helpers/pageConf')(req).auth.register;
     if (firstname || lastname || gender || email) {
