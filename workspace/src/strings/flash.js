@@ -6,7 +6,7 @@ module.exports = {
         },
         active: {
             needActiveAccount: ['Para acceder a esta pestaña necesitas activar tu cuneta'],
-            yourAccountAlreadyActive: ['Tu cuneta ya se encuentra activada.']
+            yourAccountAlreadyActive: ['Tu cuenta ya se encuentra activada.']
         }
     },
     auth: {
