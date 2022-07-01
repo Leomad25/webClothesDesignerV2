@@ -32,6 +32,8 @@ module.exports = {
         }
     },
     update: {
-        
+        activeAccount: async (id) => {
+            return await pool.query('UPDATE `clothes_designer_db`.`users` SET `active` = ? WHERE (`iduser` = ?);', [1, id]);
+        }
     }
 }

@@ -1,7 +1,7 @@
 const passport = require('passport');
 const passportLocal = require('passport-local').Strategy;
 
-const database = require('./helpers/sentences/users.database');
+const database = require('./helpers/database/users.database');
 const encrypt = require('./helpers/encrypt');
 const controllerRegister = require('../controller/auth/register.controller');
 const controllerLogin = require('../controller/auth/login.controller');

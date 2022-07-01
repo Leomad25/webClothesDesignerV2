@@ -59,6 +59,24 @@ module.exports = {
                     ]
                 }
             ]
+        },
+        activation: {
+            title: 'Activación de cuenta',
+            article: [
+                {
+                    title: 'Clave de activación',
+                    text: [
+                        {p: 'La clave de activación fue enviada a su direccion de correo.'},
+                        {p: 'Tenga presente que la clave puede durar unos cuantos minutos en llegar.'},
+                        {p: 'Clave'}
+                    ],
+                    btn: [
+                        {btn: 'Validar'},
+                        {btn: 'Reenviar la clave'},
+                        {btn: 'Corregir mi direccion de correo'}
+                    ]
+                }
+            ]
         }
     }
 }

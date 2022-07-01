@@ -1,30 +1,38 @@
-module.exports = function(req) {
+module.exports = function(req, param1, param2, param3) {
     const flash = require('../helpers/flash')(req);
-    return {
-        pageNotFound: {
-            stylesheet: 'pageNotFound',
-            script: 'pageNotFound',
-            strings: require('../../strings/pages').pageNotFound
-        },
-        home: {
-            stylesheet: 'home',
-            script: 'home',
-            //strings: require('../../strings/pages').home,
+
+    if (param1 == 'pageNotFound') return {
+        stylesheet: 'pageNotFound',
+        script: 'pageNotFound',
+        strings: require('../../strings/pages').pageNotFound
+    }
+
+    if (param1 == 'home') return {
+        stylesheet: 'home',
+        script: 'home',
+        //strings: require('../../strings/pages').home,
+        flash
+    }
+    
+    if (param1 == 'auth') {
+        if (param2 == 'register') return {
+            stylesheet: 'auth',
+            //script: 'auth/register',
+            strings: require('../../strings/pages').auth.register,
             flash
-        },
-        auth: {
-            register: {
-                stylesheet: 'auth',
-                script: 'auth/register',
-                strings: require('../../strings/pages').auth.register,
-                flash
-            },
-            login: {
-                stylesheet: 'auth',
-                script: 'auth/register',
-                strings: require('../../strings/pages').auth.login,
-                flash
-            }
+        }
+        if (param2 == 'login') return {
+            stylesheet: 'auth',
+            //script: 'auth/register',
+            strings: require('../../strings/pages').auth.login,
+            flash
+        }
+        if (param2 == 'activation') return {
+            stylesheet: 'auth',
+            //script: 'auth/register',
+            strings: require('../../strings/pages').auth.activation,
+            email: req.user.email,
+            flash
         }
     }
 }

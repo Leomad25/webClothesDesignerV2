@@ -4,7 +4,7 @@ const router = express.Router();
 const passport = require('passport');
 
 router.get('/login', require('../../../lib/helpers/middleware').auth.isNotLoggedIn, (req, res) => {
-    res.render('pages/auth/login', require('../../../lib/helpers/pageConf')(req).auth.login);
+    res.render('pages/auth/login', require('../../../lib/helpers/pageConf')(req, 'auth', 'login'));
 });
 
 router.post('/login', passport.authenticate('local.login', {

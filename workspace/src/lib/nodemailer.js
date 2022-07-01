@@ -26,13 +26,14 @@ nodeMailerExport.verify = () => {
 nodeMailerExport.getEmail = require('./helpers/emails');
 
 nodeMailerExport.sendMail = async function(message) {
+    let rtn = true;
     await transporter.sendMail(message, (err) => {
         if (err) {
             console.log('error: ', err);
-        } else {
-            console.log('mensaje enviado');
+            rtn = false;
         }
     });
+    return rtn;
 }
 
 module.exports = nodeMailerExport;

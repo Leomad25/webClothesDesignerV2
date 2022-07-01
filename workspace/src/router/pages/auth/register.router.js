@@ -6,7 +6,7 @@ const passport = require('passport');
 
 router.get('/register', require('../../../lib/helpers/middleware').auth.isNotLoggedIn, (req, res) => {
     const { firstname, lastname, gender, email } = req.query;
-    let pageConf = require('../../../lib/helpers/pageConf')(req).auth.register;
+    let pageConf = require('../../../lib/helpers/pageConf')(req, 'auth', 'register');
     if (firstname || lastname || gender || email) {
         const preload = {}
         if (firstname) preload.firstname = firstname;
