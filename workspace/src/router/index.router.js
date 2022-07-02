@@ -10,4 +10,7 @@ router.use('/auth', require('./pages/auth/login.router'));      // login
 router.use('/auth', require('./pages/auth/logout.router'));     // logout
 router.use('/auth', require('./pages/auth/activation.router')); // activation
 
+// tickets
+router.use('/tickets', require('./pages/tickets/add.router'));   // add
+
 module.exports = router;

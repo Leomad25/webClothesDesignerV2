@@ -35,4 +35,13 @@ module.exports = function(req, param1, param2, param3) {
             flash
         }
     }
+
+    if (param1 == 'tickets') {
+        if (param2 == 'add') return {
+            stylesheet: 'tickets/add',
+            //script: 'auth/register',
+            strings: require('../../strings/pages').tickets.add,
+            flash
+        }
+    }
 }

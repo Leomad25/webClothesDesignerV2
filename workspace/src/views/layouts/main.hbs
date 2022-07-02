@@ -12,12 +12,12 @@
 <body>
     <section id="background-image"><img src="/img/backgroundImg.png" alt="background image"><section class="background-opacity"></section></section>
     {{#if strings/title}}
-    <header>
+    <header style="z-index: 100;">
         <h1>{{strings/title}}</h1>
     </header>
     {{/if}}
     {{>flash}}
-    <main id="main">
+    <main id="main" style="z-index: 0;">
         {{{ body }}}
     </main>
     <footer id="footer">

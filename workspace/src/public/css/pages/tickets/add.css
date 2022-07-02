@@ -1,0 +1,144 @@
+article {
+    margin-top: 1rem;
+    background-color: rgba(0, 0, 0, .4);
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+    article h2 {
+        font-size: 2rem;
+        font-style: italic;
+        padding-top: .5rem;
+    }
+
+    article form {
+        padding-bottom: 1rem;
+    }
+
+        article form button[type="submit"] {
+            background-color: rgba(0, 0, 0, .5);
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem;
+            padding: 1rem;
+            font-style: italic;
+            margin-top: 1rem;
+            border-radius: 25px;
+            border: 2px solid white;
+            cursor: pointer;
+            transition: all .5s;
+        }
+
+        article form button[type="submit"]:hover {
+            background-color: rgba(0, 0, 0, 1);
+            color: white;
+            font-weight: bold;
+            font-size: 2rem;
+            padding: 1rem 1.5rem;
+        }
+
+    article section {
+        margin-top: 1rem;
+        width: 90%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    article .type {
+        max-width: 500px;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        background-color: rgba(0, 0, 0, .5);
+        border-radius: 25px;
+    }
+
+        article .type label {
+            font-size: 1.3rem;
+            font-style: italic;
+        }
+
+        article .type select {
+            width: 90%;
+            margin-top: .4rem;
+            text-align: center;
+            cursor: pointer;
+            padding-top: .2rem;
+            padding-bottom: .2rem;
+            font-size: 1.1rem;
+            border: 1px solid white;
+            background-color: black;
+            color: white
+        }
+
+    article .desc {
+        max-width: 800px;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        background-color: rgba(0, 0, 0, .5);
+        border-radius: 25px;
+    }
+
+        article .desc label {
+            font-size: 1.3rem;
+            font-style: italic;
+        }
+
+        article .desc textarea {
+            width: 90%;
+            margin-top: .4rem;
+            height: 120px;
+            background-color: rgba(0, 0, 0, .7);
+            resize: vertical;
+            color: white;
+            padding: .5rem;
+            font-size: 1.2rem;
+        }
+
+            article .desc textarea::placeholder {
+                color: white;
+            }
+
+    article .ref {
+        max-width: 700px;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        background-color: rgba(0, 0, 0, .5);
+        border-radius: 25px;
+    }
+
+        article .ref input {
+            background-color: rgba(0, 0, 0, .8);
+            border: 1px solid white;
+            padding-top: .2rem;
+            padding-bottom: .2rem;
+            padding-left: .1rem;
+            padding-right: .1rem;
+            width: 90%;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        article .ref input::placeholder {
+            color: white;
+        }
+
+        article .ref button {
+            background-color: black;
+            color: white;
+            border: 2px solid white;
+            border-radius: 25px;
+            padding: .3rem .5rem;
+            font-size: 1.1rem;
+            margin-left: .2rem;
+            margin-right: .2rem;
+            margin-top: .5rem;
+            cursor: pointer;
+            transition: all .5rem;
+        }
+
+        article .ref button:hover {
+            background-color: rgb(50, 50, 50);
+            padding: .4rem .5rem;
+            transition: all .5s;
+        }

@@ -78,5 +78,30 @@ module.exports = {
                 }
             ]
         }
+    },
+    tickets: {
+        add: {
+            title: 'Tickets',
+            article: [
+                {
+                    title: 'Crear nuevo ticket',
+                    text: [
+                        {p: 'Tipo de trabajo:'},
+                        {p: 'Descripción:'},
+                        {p: 'Escriba una descripción del producto que desea.'},
+                        {p: 'Tenga en cuenta que este proceso es para que una de nuestras modistas pueda leer su propuesta, las medidas se solicitaran mas adelante en el proceso.'},
+                        {p: 'No ha agreado ninguna imagen de referencia.'}
+                    ],
+                    select: [
+                        {opt: '- Seleccione una opción -'}
+                    ],
+                    btn: [
+                        {btn: 'Agregar imagen de referencia'},
+                        {btn: 'Eleminar imagen'},
+                        {btn: 'Enviar tickets'}
+                    ]
+                }
+            ]
+        }
     }
 }
