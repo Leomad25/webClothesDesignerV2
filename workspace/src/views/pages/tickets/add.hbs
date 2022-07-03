@@ -6,12 +6,17 @@
             <br>
             <select name="type" id="type">
                 <option value="NONE">{{strings/article/0/select/0/opt}}</option>
+                {{#if worktype}}
+                {{#each worktype}}
+                <option value="{{idworktype}}">{{name}}</option>
+                {{/each}}
+                {{/if}}
             </select>
         </section>
         <section class="desc">
             <label for="desc">{{strings/article/0/text/1/p}}</label>
             <br>
-            <textarea name="desc" id="desc" placeholder="{{strings/article/0/text/2/p}}"></textarea>
+            <textarea name="desc" id="desc" placeholder="{{strings/article/0/text/2/p}}" required></textarea>
             <p>{{strings/article/0/text/3/p}}</p>
         </section>
         <section class="ref">
@@ -19,7 +24,6 @@
             <br>
             <ul id="ref-list">
             </ul>
-            <br>
             <button type="button" id="addRefImage">{{strings/article/0/btn/0/btn}}</button>
         </section>
         <button type="submit">{{strings/article/0/btn/2/btn}}</button>
