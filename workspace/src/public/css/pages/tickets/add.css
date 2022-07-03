@@ -1,5 +1,6 @@
 article {
     margin-top: 1rem;
+    margin-bottom: 1rem;
     background-color: rgba(0, 0, 0, .4);
     text-align: center;
     color: white;
@@ -93,6 +94,7 @@ article {
             color: white;
             padding: .5rem;
             font-size: 1.2rem;
+            cursor: text;
         }
 
             article .desc textarea::placeholder {
@@ -105,6 +107,7 @@ article {
         padding-bottom: 1rem;
         background-color: rgba(0, 0, 0, .5);
         border-radius: 25px;
+        overflow: hidden;
     }
 
         article .ref input {
@@ -121,6 +124,16 @@ article {
 
         article .ref input::placeholder {
             color: white;
+        }
+
+        article .ref ul {
+            width: 85%;
+            margin-top: 1rem;
+            border: 1px solid white;
+            height: 8rem;
+            background-color: rgba(0, 0, 0, .5);
+            margin-left: 50%;
+            transform: translateX(-50%);
         }
 
         article .ref button {

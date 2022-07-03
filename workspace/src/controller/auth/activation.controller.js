@@ -1,4 +1,4 @@
-const database = require('../../lib/helpers/database/activations.database');
+const database = require('../../lib/database/activations.database');
 
 async function insertToDatabase(req, res, key) {
     const keyEnc = await require('../../lib/helpers/encrypt').encryptPassword(key);
@@ -48,7 +48,7 @@ async function attemptsOversized(req, res) {
 
 async function validateSuccess(req, res) {
     await database.delete(req.user.iduser);
-    if ((await require('../../lib/helpers/database/users.database').update.activeAccount(req.user.iduser)).affectedRows > 0) {
+    if ((await require('../../lib/database/users.database').update.activeAccount(req.user.iduser)).affectedRows > 0) {
         req.flash('full_success', require('../../strings/flash').auth.activation.success.activateSuccess);
         res.redirect('/');
     } else {

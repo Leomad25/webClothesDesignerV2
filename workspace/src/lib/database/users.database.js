@@ -9,7 +9,7 @@
  *  - active: boolean()
  */
 
-const pool = require('../../database');
+const pool = require('../database.module');
 
 module.exports = {
     insert: {

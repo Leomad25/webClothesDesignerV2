@@ -6,7 +6,7 @@
  *  - attempts: tinyint
  */
 
- const pool = require('../../database');
+ const pool = require('../database.module');
 
  module.exports = {
     insert: async (id, key, datetime) => {
