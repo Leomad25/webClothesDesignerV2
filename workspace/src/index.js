@@ -48,10 +48,10 @@ app.use(async (req, res, next) => {
 
 // Routes
 app.use(require('./router/index.router'));
-app.use(express.static(path.join(__dirname, 'public')));    // Public
-//app.use(express.static(path.join(__dirname, 'upload')));  // Upload
+app.use(express.static(path.join(__dirname, 'public')));            // Public
+app.use(require('./router/uploads.router'));                        // Uploads
 const notFound = require('./controller/pageNotFound.controller');
-app.use(notFound.notFound);  // Route notFound
+app.use(notFound.notFound);                                         // Route notFound
 
 // Starting server
 server.listen(app.get('port'), async function() {

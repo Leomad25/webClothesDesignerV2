@@ -4,6 +4,10 @@ module.exports = {
             needUnlogin: ['No puedes acceder con una sesion iniciada a esta pestaña.'],
             needLogin: ['Primero tienes que iniciar sesion para acceder a esta pestaña.']
         },
+        permissions: {
+            yorAccountIsBlocked: ['Acceso restringido, tu cuenta se encuentra bloqueada.'],
+            youDontHaveAccessTo: (req) => {return ['Tu no tienes los permisos necesarios para ver la siguiente dirección:', req.protocol + '://' + req.get('host') + req.originalUrl]}
+        },
         active: {
             needActiveAccount: ['Para acceder a esta pestaña necesitas activar tu cuneta'],
             yourAccountAlreadyActive: ['Tu cuenta ya se encuentra activada.']

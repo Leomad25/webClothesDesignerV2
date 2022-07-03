@@ -46,7 +46,7 @@ module.exports = {
             title: 'Formulario de ingreso',
             article: [
                 {
-                    title: 'Registro de usuario',
+                    title: 'Ingreso de usuario',
                     text: [
                         {p: 'e-Mail'},
                         {p: 'Contraseña'}
@@ -90,14 +90,13 @@ module.exports = {
                         {p: 'Descripción:'},
                         {p: 'Escriba una descripción del producto que desea.'},
                         {p: 'Tenga en cuenta que este proceso es para que una de nuestras modistas pueda leer su propuesta, las medidas se solicitaran mas adelante en el proceso.'},
-                        {p: 'No ha agreado ninguna imagen de referencia.'}
+                        {p: 'Por favor subir imágenes de referencia:'},
+                        {p: 'Por favor utilizar imágenes con extensión PNG o JPG'}
                     ],
                     select: [
                         {opt: '- Seleccione una opción -'}
                     ],
                     btn: [
-                        {btn: 'Agregar imagen de referencia'},
-                        {btn: 'Eleminar imagen'},
                         {btn: 'Enviar tickets'}
                     ]
                 }
