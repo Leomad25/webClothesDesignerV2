@@ -1,6 +1,6 @@
 <article>
     <h2>{{strings/article/0/title}}</h2>
-    <form action="/tickets/add" method="post">
+    <form action="/tickets/add" method="post" enctype="multipart/form-data">
         <section class="type">
             <label for="type">{{strings/article/0/text/0/p}}</label>
             <br>
@@ -22,7 +22,7 @@
         <section class="ref">
             <label for="ref">{{strings/article/0/text/4/p}}</label>
             <br>
-            <input type="file" name="ref" id="ref" accept="image/png, image/jpeg" multiple>
+            <input type="file" name="ref-images" id="ref" accept="image/png, image/jpeg" multiple>
             <p>*{{strings/article/0/text/5/p}}*</p>
         </section>
         <button type="submit">{{strings/article/0/btn/0/btn}}</button>
