@@ -13,10 +13,10 @@ const privateMiddleware = {
         res.redirect('/');
     },
     getResource: (req, res, next) => {
-        express.static(path.join(__dirname, '../uploads/users/', req.params.id))(req, res, next);
+        express.static(path.join(__dirname, '../uploads/tickets/', req.params.id))(req, res, next);
     }
 }
 
-router.use('/uploads/users/:id', middleware.auth.isLoggedIn, middleware.permissions.block.isNotBlocked, privateMiddleware.isEnabledAccess, privateMiddleware.getResource);
+router.use('/uploads/tickets/:id', middleware.auth.isLoggedIn, middleware.permissions.block.isNotBlocked, privateMiddleware.isEnabledAccess, privateMiddleware.getResource);
 
 module.exports = router;

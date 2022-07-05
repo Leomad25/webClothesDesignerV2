@@ -18,7 +18,9 @@ module.exports = {
         block: {
             isNotBlocked: async (req, res, next) => {
                 const select = await require('../database/permissions.database').select(req.user.iduser);
-                if (select.length > 0 && select[0].blocked == 0) return next();
+                if (select.length != 0) {
+                    if ((select.length > 0 && select[0].blocked == 0)) return next();
+                } else return next();
                 req.flash('full_error', flashMessage.permissions.yorAccountIsBlocked);
                 return res.redirect('/');
             }
@@ -49,7 +51,7 @@ module.exports = {
             const database = await require('../database/users.database').select.byId(req.user.iduser);
             if ((database.length > 0) && (database[0].active == 1)) return next();
             req.flash('full_error', flashMessage.active.needActiveAccount);
-            return res.redirect('/auth/active');
+            return res.redirect('/auth/activation');
         },
         isNotActivate: async (req, res, next) => {
             const database = await require('../database/users.database').select.byId(req.user.iduser);
