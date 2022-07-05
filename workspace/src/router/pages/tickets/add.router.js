@@ -15,9 +15,17 @@ router.get('/add', middleware.auth.isLoggedIn, middleware.activation.isActivate,
 router.post('/add', middleware.auth.isLoggedIn, middleware.activation.isActivate, (req, res) => {
     multer.tickets.array('ref-images', 8)(req, res, (err) => {
         if (err) {
-            console.log('Error: ', err);
+            req.flash('full_error', controller.getFlashMessage().error.storageImageFailure);
+            res.redirect('/tickets/add');
         } else {
-            console.log(req.files);
+            const { type, desc } = req.body;
+            const uuid = require('uuid').v4();
+            if (controller.createNewTickets(uuid, type, desc, req.files)) {
+                res.redirect('/tickets/ticket/' + uuid);
+            } else {
+                req.flash('full_error', controller.getFlashMessage().error.failureToCreateTicket)
+                res.redirect('/tickets/add');
+            }
         }
     });
 });

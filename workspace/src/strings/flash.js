@@ -45,5 +45,13 @@ module.exports = {
             }
         },
         deserialize: ['A ocurrdio un error al deserizar el usuario.', 'El usuario al que se intentan decerializar no se encuentra en la base de datos.']
+    },
+    tickets: {
+        add: {
+            error: {
+                storageImageFailure: ['A ocurrido un error al almacenar las imagenes.'],
+                failureToCreateTicket: ['No se pudo crear el ticket.']
+            }
+        }
     }
 }
