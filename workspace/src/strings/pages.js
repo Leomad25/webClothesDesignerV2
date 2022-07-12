@@ -102,5 +102,23 @@ module.exports = {
                 }
             ]
         }
+    },
+    orders: {
+        tickets: {
+            title: 'Ordenes',
+            filter: {
+                filter: 'Filtro',
+                byWorkType: 'Por tipo de trabajo:',
+                notFilter: '- No filtrado -',
+                apply: 'Aplicar filtros'
+            },
+            article: [
+                {
+                    title: 'Tickets disponibles'
+                }, {
+                    title: 'Tickets solicitados'
+                }
+            ]
+        }
     }
 }

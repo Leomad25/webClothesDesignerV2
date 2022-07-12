@@ -6,7 +6,7 @@
  */
 
 /**
- * Sql Structure (tickets-images)
+ * Sql Structure (_tickets-images)
  *  - idticket: bigint
  *  - uuid: varchar(255)
  */
@@ -21,5 +21,13 @@ module.exports = {
                 await pool.query('INSERT INTO `clothes_designer_db`.`_tickets-images` (`idticket`, `idimage`) VALUES (?, ?)', [uuid, images[i].uuid]);
         }
         return insert;
+    },
+    select: {
+        all: async () => { return pool.query('SELECT * FROM clothes_designer_db.tickets;'); },
+        notSelected: async () => { return pool.query('SELECT * FROM clothes_designer_db.tickets WHERE `selectedBy` IS NULL;'); },
+        areSelected: async () => { return pool.query('SELECT * FROM clothes_designer_db.tickets WHERE `selectedBy` IS NOT NULL;'); },
+        selectedBy: async (id) => { return pool.query('SELECT * FROM clothes_designer_db.tickets WHERE `selectedBy` = ?;', [id]); },
+        allImages: async () => { return pool.query('SELECT * FROM clothes_designer_db.`_tickets-images`;'); },
+        imagesById: async (id) => { return pool.query('SELECT * FROM clothes_designer_db.`_tickets-images` WHERE `idticket` = ?;', [id]); }
     }
 }

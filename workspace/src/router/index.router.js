@@ -13,4 +13,7 @@ router.use('/auth', require('./pages/auth/activation.router')); // activation
 // tickets
 router.use('/tickets', require('./pages/tickets/add.router'));   // add
 
+// orders
+router.use('/orders', require('./pages/orders/tickets.router')); // tickets
+
 module.exports = router;

@@ -1,0 +1,120 @@
+<article class="available">
+    <h2>{{strings/article/0/title}}</h2>
+    <section class="filter">
+        <section class="filter-title">
+            <section class="filter-title-panel">
+                <button onclick="changeStatusFilter();">
+                    <img src="/img/icons/black/circle-down.png" alt="open">
+                    <img src="/img/icons/black/circle-up.png" alt="close" style="display: none;">
+                </button>
+                <h3>{{strings/filter/filter}}</h3>
+            </section>
+        </section>
+        <section class="filter-panel close" id="filter-panel">
+            <ul>
+                <li>
+                    <label for="byWorkType">{{strings/filter/byWorkType}}</label>
+                    <select name="byWorkType" id="byWorkType">
+                        <option value="NONE">{{strings/filter/notFilter}}</option>
+                        {{#if worktype}}
+                        {{#each worktype}}<option value="{{idworktype}}">{{name}}</option>{{/each}}
+                        {{/if}}
+                    </select>
+                </li>
+            </ul>
+            <button>{{strings/filter/apply}}</button>
+        </section>
+    </section>
+    <section class="items" id="available-items">
+        <ul class="panel">
+        </ul>
+    </section>
+    <section class="skip-panel">
+        <ul>
+            <li><img src="/img/icons/black/previous2.png" alt="x10"></li>
+            <li><img src="/img/icons/black/backward2.png" alt="x5"></li>
+            <li><img src="/img/icons/black/radio-unchecked.png" alt="x1"></li>
+            <li><img src="/img/icons/black/radio-checked.png" alt="x0"></li>
+            <li><img src="/img/icons/black/radio-unchecked.png" alt="x1"></li>
+            <li><img src="/img/icons/black/forward3.png" alt="x5"></li>
+            <li><img src="/img/icons/black/next2.png" alt="x10"></li>
+        </ul>
+    </section>
+</article>
+<article class="requested">
+    <h2>{{strings/article/1/title}}</h2>
+    <section class="filter">
+        <section class="filter-title">
+            <section class="filter-title-panel">
+                <button onclick="changeStatusFilter();">
+                    <img src="/img/icons/black/circle-down.png" alt="open">
+                    <img src="/img/icons/black/circle-up.png" alt="close" style="display: none;">
+                </button>
+                <h3>{{strings/filter/filter}}</h3>
+            </section>
+        </section>
+        <section class="filter-panel close" id="filter-panel">
+            <ul>
+                <li>
+                    <label for="byWorkType">{{strings/filter/byWorkType}}</label>
+                    <select name="byWorkType" id="byWorkType">
+                        <option value="NONE">{{strings/filter/notFilter}}</option>
+                        {{#if worktype}}
+                        {{#each worktype}}<option value="{{idworktype}}">{{name}}</option>{{/each}}
+                        {{/if}}
+                    </select>
+                </li>
+            </ul>
+            <button>{{strings/filter/apply}}</button>
+        </section>
+    </section>
+    <section class="items" id="requested-items">
+        <ul class="panel"></ul>
+    </section>
+    <section class="skip-panel">
+        <ul>
+            <li><img src="/img/icons/black/previous2.png" alt="x10"></li>
+            <li><img src="/img/icons/black/backward2.png" alt="x5"></li>
+            <li><img src="/img/icons/black/radio-unchecked.png" alt="x1"></li>
+            <li><img src="/img/icons/black/radio-checked.png" alt="x0"></li>
+            <li><img src="/img/icons/black/radio-unchecked.png" alt="x1"></li>
+            <li><img src="/img/icons/black/forward3.png" alt="x5"></li>
+            <li><img src="/img/icons/black/next2.png" alt="x10"></li>
+        </ul>
+    </section>
+</article>
+<article id="ticketsItems" style="display: none;">
+    <ul class="available">
+        {{#if tickets/available}}
+        {{#each tickets/available}}
+        <li>
+            <span class="id">{{idticket}}</span>
+            <span class="wt">{{idworktype}}</span>
+            <span class="dc">{{description}}</span>
+            {{#if images}}
+            <samp class="im">
+                {{#each images}}<span class="it">{{this}}</span>{{/each}}
+            </samp>
+            {{/if}}
+        </li>
+        {{/each}}
+        {{/if}}
+    </ul>
+    <ul class="requested">
+        {{#if tickets/requested}}
+        {{#each tickets/requested}}
+        <li>
+            <span class="id">{{idticket}}</span>
+            <span class="wt">{{idworktype}}</span>
+            <span class="dc">{{description}}</span>
+            {{#if images}}
+            <samp class="im">
+                {{#each images}}<span class="it">{{this}}</span>{{/each}}
+            </samp>
+            {{/if}}
+        </li>
+        {{/each}}
+        {{/if}}
+    </ul>
+    <p>{{user.iduser}}</p>
+</article>

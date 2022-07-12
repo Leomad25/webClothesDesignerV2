@@ -44,4 +44,13 @@ module.exports = function(req, param1, param2, param3) {
             flash
         }
     }
+
+    if (param1 == 'orders') {
+        if (param2 == 'tickets') return {
+            stylesheet: 'orders/tickets',
+            script: 'orders/tickets',
+            strings: require('../../strings/pages').orders.tickets,
+            flash
+        }
+    }
 }
