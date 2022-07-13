@@ -24,7 +24,7 @@ module.exports = {
     },
     select: {
         all: async () => { return pool.query('SELECT * FROM clothes_designer_db.tickets;'); },
-        byId: async (id) => { return pool.query('SELECT * FROM clothes_designer_db.tickets WHERE iduser = ?;', [id])},
+        byId: async (id) => { return pool.query('SELECT * FROM clothes_designer_db.tickets WHERE `iduser` = ?;', [id])},
         notSelected: async () => { return pool.query('SELECT * FROM clothes_designer_db.tickets WHERE `selectedBy` IS NULL;'); },
         areSelected: async () => { return pool.query('SELECT * FROM clothes_designer_db.tickets WHERE `selectedBy` IS NOT NULL;'); },
         selectedBy: async (id) => { return pool.query('SELECT * FROM clothes_designer_db.tickets WHERE `selectedBy` = ?;', [id]); },
