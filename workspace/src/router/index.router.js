@@ -11,6 +11,7 @@ router.use('/auth', require('./pages/auth/logout.router'));     // logout
 router.use('/auth', require('./pages/auth/activation.router')); // activation
 
 // tickets
+router.use('/tickets', require('./pages/tickets/tickets.router')) // panel
 router.use('/tickets', require('./pages/tickets/add.router'));   // add
 
 // orders

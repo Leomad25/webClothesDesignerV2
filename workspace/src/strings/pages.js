@@ -80,6 +80,14 @@ module.exports = {
         }
     },
     tickets: {
+        tickets: {
+            title: 'Tickets',
+            article: [
+                {
+                    title: 'Mis tickets'
+                }
+            ]
+        },
         add: {
             title: 'Tickets',
             article: [

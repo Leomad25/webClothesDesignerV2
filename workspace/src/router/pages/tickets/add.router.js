@@ -20,7 +20,7 @@ router.post('/add', middleware.auth.isLoggedIn, middleware.activation.isActivate
         } else {
             const { type, desc } = req.body;
             const uuid = require('uuid').v4();
-            if (controller.createNewTickets(uuid, type, desc, req.files)) {
+            if (controller.createNewTickets(uuid, req.user.iduser, type, desc, req.files)) {
                 res.redirect('/tickets/ticket/' + uuid);
             } else {
                 req.flash('full_error', controller.getFlashMessage().error.failureToCreateTicket)
