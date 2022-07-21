@@ -1,0 +1,195 @@
+main {
+    color: white;
+}
+
+article {
+    margin-top: 1rem;
+    background-color: rgba(0, 0, 0, .5);
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+/* Panel de tickets */
+article .items ul {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    list-style: none;
+    margin-top: .5rem;
+}
+
+    article .items ul li {
+        background-color: rgba(0, 0, 0, .5);
+        position: absolute;
+        transform: translateX(-50%) translateY(-50%);
+        top: 50%;
+        border-radius: 25px;
+        border: 1px solid black;
+        overflow: hidden;
+    }
+
+    article .items ul .item_1,
+    article .items ul .item_3,
+    article .items ul .item_5,
+    article .items ul .item_7,
+    article .items ul .item_9 {
+        background-color: rgba(255, 255, 255, .5);
+    }
+
+    article .items ul .item_1 {
+        height: 450px;
+        width: 300px;
+        left: -12.5%;
+        z-index: 6;
+    }
+
+    article .items ul .item_2 {
+        height: 450px;
+        width: 300px;
+        left: 6%;
+        z-index: 7;
+    }
+
+    article .items ul .item_3 {
+        height: 500px;
+        width: 300px;
+        left: 18.5%;
+        z-index: 8;
+    }
+
+    article .items ul .item_4 {
+        height: 550px;
+        width: 350px;
+        left: 31%;
+        z-index: 9;
+    }
+
+    article .items ul .item_5 {
+        height: 600px;
+        width: 400px;
+        left: 50%;
+        z-index: 10;
+    }
+
+    article .items ul .item_6 {
+        height: 550px;
+        width: 350px;
+        left: 69%;
+        z-index: 9;
+    }
+
+    article .items ul .item_7 {
+        height: 500px;
+        width: 300px;
+        left: 81.5%;
+        z-index: 8;
+    }
+
+    article .items ul .item_8 {
+        height: 450px;
+        width: 300px;
+        left: 94%;
+        z-index: 7;
+    }
+
+    article .items ul .item_9 {
+        height: 450px;
+        width: 300px;
+        left: 112.5%;
+        z-index: 6;
+    }
+
+        article .items ul li .card-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+            article .items ul li .card-container .card-title,
+            article .items ul li .card-container .card-footer,
+            article .items ul li .card-container .card-background {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                color: black;
+            }
+
+            article .items ul li .card-container .card-title {
+                z-index: 10;
+                display: block;
+            }
+
+                article .items ul li .card-container .card-title h4 {
+                    font-size: 1.2rem;
+                    padding-top: .5rem;
+                    padding-bottom: .5rem;
+                    text-align: center;
+                    background-color: rgba(255, 255, 255, .5);
+                    border-bottom: 1px dotted black;
+                }
+                
+                article .items ul li .card-container .card-title p {
+                    text-align: center;
+                    background-color: rgba(255, 255, 255, .3);
+                    width: 100%;
+                }
+
+            article .items ul li .card-container .card-footer {
+                z-index: 10;
+            }
+
+                article .items ul li .card-container .card-footer p {
+                    position: absolute;
+                    height: 50%;
+                    width: 100%;
+                    background-color: rgba(255, 255, 255, .5);
+                    text-align: center;
+                    bottom: 0;
+                    transition: all .5s;
+                    border-top: 1px dotted black;
+                    overflow-y: auto;
+                }
+
+                article .items ul li .card-container .card-footer p:hover {
+                    background-color: rgba(255, 255, 255, 1);
+                }
+
+            article .items ul li .card-container .card-background {
+                z-index: 9;
+            }
+
+                article .items ul li .card-container .card-background ul {
+                    position: absolute;
+                    display: block;
+                    border: 0;
+                    margin: 0;
+                    left: 50%;
+                    height: 100%;
+                    width: 100%;
+                    top: 0;
+                }
+
+                    article .items ul li .card-container .card-background ul li {
+                        position: relative;
+                        display: block;
+                        height: 100%;
+                        width: 100%;
+                        border: 0;
+                        margin: 0;
+                    }
+
+                        article .items ul li .card-container .card-background ul li img {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translateX(-50%) translateY(-50%);
+                            display: block;
+                            width: 0%;
+                            min-width: 100%;
+                            height: 0%;
+                            min-height: 100%;
+                            border: 0;
+                            margin: 0;
+                        }

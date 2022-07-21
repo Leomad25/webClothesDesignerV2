@@ -39,7 +39,7 @@ module.exports = function(req, param1, param2, param3) {
     if (param1 == 'tickets') {
         if (param2 == 'tickets') return {
             stylesheet: 'tickets/tickets',
-            //script: 'auth/register',
+            script: 'tickets/tickets',
             strings: require('../../strings/pages').tickets.tickets,
             flash
         }

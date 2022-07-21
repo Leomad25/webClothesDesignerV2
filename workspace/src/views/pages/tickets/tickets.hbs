@@ -1,8 +1,25 @@
 <article>
     <h2>{{strings/article/0/title}}</h2>
-    <section class="tickets-list" id="tickets-list">
-        <ul></ul>
+    <section class="tickets-list items" id="tickets-list">
+        <ul class="panel"></ul>
     </section>
 </article>
-<article id="tickets" style="display: none;">
+<article id="tickets-items" style="display: none;">
+    <ul>
+        {{#each tickets}}
+        <li>
+            <span class="id">{{idticket}}</span>
+            <span class="wt">{{worktype}}</span>
+            <span class="dc">{{description}}</span>
+            <span class="im">
+                {{#each images}}
+                <span class="img">
+                    <span class="url">{{url}}</span>
+                    <span class="name">{{name}}</span>
+                </span>
+                {{/each}}
+            </span>
+        </li>
+        {{/each}}
+    </ul>
 </article>
